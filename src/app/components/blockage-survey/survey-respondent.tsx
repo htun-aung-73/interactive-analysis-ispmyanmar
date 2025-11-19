@@ -1,0 +1,44 @@
+import { RedSquareIcon } from '@/app/components/chart-ui/red-square-icon'
+import PieChartApp from '@/app/components/chart-ui/pie-chart'
+import { age, gender, income, location } from '@/library/blockage-data'
+
+export default function SurveyRespondent() {
+  return (
+    <div id="respondent-info" className={'mt-20'}>
+      <h3 className={'font-medium flex items-center text-lg mb-5'}>
+        <RedSquareIcon />
+        Survey Respondent Information
+      </h3>
+      <p className={'mb-3'}>
+        A total of 1,015 respondents participated in the survey.{' '}
+        <span className={'font-bold'}>Fifty seven percent</span> were female
+        (579 respondents), followed by{' '}
+        <span className={'font-bold'}>41 percent male</span> (417 respondents),
+        and <span className={'font-bold'}>two percent</span> others (19
+        respondents). The survey covered a mix of locations: urban areas, rural
+        areas, border areas, and Internally Displaced Person (IDP) camps.
+        Participants were 18 years of age and older, with the 26–40 age group
+        the largest, followed by those aged 41–60. In terms of monthly household
+        income, <span className={'font-bold'}>24 percent</span> reported earning
+        between 400,000 and 600,000 MMK,{' '}
+        <span className={'font-bold'}>20 percent</span> between 200,000 and
+        400,000 MMK, and <span className={'font-bold'}>18 percent</span> over 1
+        million MMK. The survey findings are organized into five sections.
+      </p>
+      <div className={'chart-grid grid grid-cols-1 gap-8 mt-10'}>
+        <div className={'border-t-2 border-blue-300 w-full'}>
+          <PieChartApp props={gender} />
+        </div>
+        <div className={'border-t-2 border-blue-300 w-full'}>
+          <PieChartApp props={location} />
+        </div>
+        <div className={'border-t-2 border-blue-300 w-full'}>
+          <PieChartApp props={income} />
+        </div>
+        <div className={'border-t-2 border-blue-300 w-full'}>
+          <PieChartApp props={age} />
+        </div>
+      </div>
+    </div>
+  )
+}

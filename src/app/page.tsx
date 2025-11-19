@@ -1,65 +1,109 @@
-import Image from "next/image";
+import Image from 'next/image'
+import React from 'react'
+import ContentCard from '@/app/components/content-card'
+import { posts } from '@/library/post-content'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="font-sans max-w-[1120] mx-auto">
+      <header className="mb-5 container mx-auto px-5 md:px-6">
+        <div>
+          <nav
+            className={
+              'flex justify-between items-center border-b border-gray-300 py-3'
+            }
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="site-logo w-[110] h-[50]">
+              <a
+                href="https://ispmyanmar.com/"
+                className="custom-logo-link"
+                rel="home"
+                target="_blank"
+                aria-current="page"
+              >
+                <Image
+                  width="468"
+                  height="222"
+                  src="https://ispmyanmar.com/wp-content/uploads/2023/11/isp-myanmar-logo-1.png"
+                  className="custom-logo"
+                  alt="ISP-Myanmar"
+                  decoding="async"
+                  sizes="(max-width: 468px) 100vw, 468px"
+                />
+              </a>
+            </div>
+            <div className={'flex flex-row justify-end items-center grow'}>
+              <ul className="hidden lg:flex flex-row uppercase font-medium basis-3/5">
+                <li className="mr-auto hover:text-pink-700">
+                  <a
+                    href="https://ispmyanmar.com/topics/"
+                    aria-expanded="false"
+                  >
+                    Topics
+                  </a>
+                </li>
+                <li className="mr-auto hover:text-pink-700">
+                  <a
+                    href="https://ispmyanmar.com/isp-products/"
+                    aria-expanded="false"
+                  >
+                    ISP Products &amp; Resources
+                  </a>
+                </li>
+                <li className="mr-auto hover:text-pink-700">
+                  <a
+                    href="https://ispmyanmar.com/all-events/"
+                    aria-expanded="false"
+                  >
+                    Events
+                  </a>
+                </li>
+                <li className="mr-auto hover:text-pink-700">
+                  <a href="https://ispmyanmar.com/media/" aria-expanded="false">
+                    Media
+                  </a>
+                </li>
+              </ul>
+              <div className={'flex flex-row justify-between items-center'}>
+                <div
+                  className={
+                    'uppercase cursor-pointer bg-gray-700 text-white px-3 rounded-sm md:mr-2 text-sm md:text-base hidden md:block'
+                  }
+                >
+                  <a
+                    target="_blank"
+                    className="mega-menu-link whitespace-nowrap"
+                    href="https://ispmyanmar.com/community"
+                  >
+                    ISP Gabyin Community
+                  </a>
+                </div>
+                <div className={'text-sm hidden md:block'}>
+                  <a
+                    className="hover:text-pink-700"
+                    target="_blank"
+                    href="https://ispmyanmar.com/subscribe/"
+                  >
+                    Subscribe
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
-      </main>
+      </header>
+      <div className="container mx-auto px-5 md:px-6 mb-15">
+        <main>
+          <section>
+            <h1 className={'uppercase text-4xl font-bold my-12 text-gray-800'}>
+              <span className={'text-pink-600'}>ISP</span> Interactive Analysis
+            </h1>
+            <div className={'grid gap-10 grid-cols-1 md:grid-cols-2'}>
+              <ContentCard content={posts} />
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
-  );
+  )
 }
