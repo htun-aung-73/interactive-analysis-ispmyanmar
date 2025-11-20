@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div
       className={
-        'hero hidden md:block container mx-auto px-5 md:px-6 relative xl:w-[1075] mt-4 h-[450] bg-amber-500'
+        'hero hidden md:block container mx-auto px-5 md:px-6 relative xl:w-[1072] mt-4 h-[450] bg-amber-500'
       }
     >
       <div className="absolute top-1/2 left-4/7 -translate-y-1/2 -translate-x-4/7 ml-5">

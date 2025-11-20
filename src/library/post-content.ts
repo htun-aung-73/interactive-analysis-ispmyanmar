@@ -43,7 +43,7 @@ export const posts: Post[] = [
       date: '20 Nov 2025',
       category: 'Socioeconomic Studies',
       imageUrl:
-        'https://ispmyanmar.com/wp-content/uploads/2025/11/ERM_10_FP.jpg',
+        'https://ispmyanmar.com/wp-content/uploads/2025/11/SCI_BlockageSurvey.jpg',
     },
   },
 ]

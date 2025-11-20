@@ -1,4 +1,6 @@
 import { RedSquareIcon } from '@/app/components/chart-ui/red-square-icon'
+import DownloadSection from "@/app/components/blockage-survey/download";
+import {downloadContents} from "@/library/download-data";
 
 export default function Appendix() {
   return (
@@ -55,17 +57,15 @@ export default function Appendix() {
         data in accordance with ISP-Myanmar&#39;s established protocols.
       </p>
       <p>
-        Please find out other publications here.
         <a
           href="https://ispmyanmar.com/publications/"
           target={'_blank'}
-          className={
-            'inline-block mt-1 md:mt-0 md:ml-2 text-sm rounded-sm text-white px-2 py-1 bg-pink-600'
-          }
+          className={'hover:underline hover:decoration-pink-600'}
         >
-          See more
+            Please find out other publications here.
         </a>
       </p>
+        <DownloadSection content={downloadContents}/>
     </div>
   )
 }
