@@ -25,7 +25,7 @@ export default function SurveyRespondent() {
         400,000 MMK, and <span className={'font-bold'}>18 percent</span> over 1
         million MMK. The survey findings are organized into five sections.
       </p>
-      <div className={'chart-grid grid grid-cols-1 gap-8 mt-10'}>
+      <div className={'chart-grid grid grid-cols-1 xl:grid-cols-2 gap-4 mt-10'}>
         <div className={'border-t-2 border-blue-300 w-full'}>
           <PieChartApp props={gender} />
         </div>
