@@ -62,7 +62,7 @@ export default function Home() {
       <main className="min-h-screen flex mt-8 container mx-auto px-5 md:px-15 lg:px-6">
         <aside
           className={
-            'hidden lg:basis-1/5 2xl:basis-1/4 lg:block bg-gray-100 p-3 sticky top-15 h-fit mr-3'
+            'hidden lg:basis-1/5 lg:block bg-gray-100 p-3 sticky top-15 h-fit mr-3'
           }
         >
           <h2 className={'font-medium flex items-center text-lg mb-5'}>
@@ -78,14 +78,14 @@ export default function Home() {
             </Link>
           ))}
         </aside>
-        <section className={'lg:basis-4/5 2xl:basis-3/4 grow lg:px-4 xl:px-6'}>
+        <section className={'lg:basis-4/5 grow lg:px-4'}>
           <ExecutiveSummary />
-          <SurveyRespondent />
           <Chapter1 />
           <Chapter2 />
           <Chapter3 />
           <Chapter4 />
           <Chapter5 />
+          <SurveyRespondent />
           <Appendix />
         </section>
       </main>

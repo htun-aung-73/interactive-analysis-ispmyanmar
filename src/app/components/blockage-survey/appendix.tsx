@@ -1,4 +1,6 @@
 import { RedSquareIcon } from '@/app/components/chart-ui/red-square-icon'
+import DownloadSection from '@/app/components/blockage-survey/download'
+import { downloadContents } from '@/library/download-data'
 
 export default function Appendix() {
   return (
@@ -54,6 +56,16 @@ export default function Appendix() {
         Upon completion of the survey, the data collector stores the collected
         data in accordance with ISP-Myanmar&#39;s established protocols.
       </p>
+      <p>
+        <a
+          href="https://ispmyanmar.com/publications/"
+          target={'_blank'}
+          className={'hover:underline hover:decoration-pink-600'}
+        >
+          Please find out other publications here.
+        </a>
+      </p>
+      <DownloadSection content={downloadContents} />
     </div>
   )
 }

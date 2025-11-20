@@ -1,4 +1,6 @@
 import { RedSquareIcon } from '@/app/components/chart-ui/red-square-icon'
+import DownloadSection from '@/app/components/blockage-survey/download'
+import { downloadContents } from '@/library/download-data'
 
 export default function ExecutiveSummary() {
   return (
@@ -78,6 +80,9 @@ export default function ExecutiveSummary() {
         The full discussion, with English subtitles, is available on
         ISP-Myanmar’s website and YouTube channel.
       </p>
+      <div>
+        <DownloadSection content={downloadContents} />
+      </div>
     </div>
   )
 }

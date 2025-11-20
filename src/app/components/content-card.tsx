@@ -11,7 +11,7 @@ export default function ContentCard({ content }: { content: Post[] }) {
           <div key={id} className={'flex flex-col mb-8'}>
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Image
-                className={`w-full ${id === content.length ? 'md:h-[650]' : 'md:h-[350]'} object-cover`}
+                className={`w-full ${id === content.length ? 'md:h-[600]' : 'md:h-[300]'} object-cover`}
                 src={postContent.imageUrl}
                 width={'400'}
                 height={'200'}

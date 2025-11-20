@@ -23,11 +23,11 @@ export const posts: Post[] = [
       title: 'Climate Shocks and Response Capacity in Myanmar – A Survey',
       subtitle: '',
       description:
-        'The findings reveal that nearly half of the surveyed townships faced multiple climate-related challenges, including droughts, floods, heavy rainfall from cyclones and typhoons, extreme heat, and landslides. These events caused substantial damage to...',
+        'The findings reveal that nearly half of the surveyed townships faced multiple climate-related challenges, including droughts, floods, heavy rainfall from cyclones...',
       date: '24 Oct 2025',
       category: 'Climate Conflict Nexus',
       imageUrl:
-        'https://ispmyanmar.com/wp-content/uploads/2025/10/Interactive_SCI.jpg',
+        'https://ispmyanmar.com/wp-content/uploads/2025/10/Interactive_FP01.jpg',
     },
   },
   {
@@ -39,11 +39,11 @@ export const posts: Post[] = [
       subtitle:
         "A Survey of Myanmar's Socioeconomic Crisis and Public Resilience",
       description:
-        'Survey findings reveal that respondents do not have enough for their needs compared to last year citing rising prices and poor job prospects. As conditions continue to worsen, the public’s foremost demands are for employment and personal security. When asked how they viewed current conditions, just over half of respondents said they “can continue to struggle on,” while a significant portion also described the situation as “hopeless”...',
+        'Survey findings reveal that respondents do not have enough for their needs compared to last year citing rising prices and poor job prospects. As conditions continue to worsen...',
       date: '20 Nov 2025',
       category: 'Socioeconomic Studies',
       imageUrl:
-        'https://ispmyanmar.com/wp-content/uploads/2025/11/ERM_10_FP.jpg',
+        'https://ispmyanmar.com/wp-content/uploads/2025/11/SCI_BlockageSurvey.jpg',
     },
   },
 ]

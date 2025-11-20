@@ -165,7 +165,7 @@ const CustomPieLegend = ({ payload }: { payload: any }) => {
 }
 
 export default function PieChartApp({ props }: { props: SurveyData }) {
-  const { question, payload, note } = props
+  const { question, payload, note, id } = props
   return (
     <div>
       <div className={'font-bold text-sm'}>
@@ -187,14 +187,12 @@ export default function PieChartApp({ props }: { props: SurveyData }) {
       </div>
       <PieChart
         responsive
-        className={
-          'w-full h-[530] border border-dotted border-t-0 border-gray-300'
-        }
+        className={'h-[530] border border-dotted border-t-0 border-gray-300'}
       >
         <Legend
           wrapperStyle={{
             fontSize: '13px',
-            marginLeft: '30px',
+            marginLeft: '20px',
             marginBottom: '10px',
           }}
           //@ts-ignore
@@ -205,8 +203,8 @@ export default function PieChartApp({ props }: { props: SurveyData }) {
           data={payload}
           cx="50%"
           cy="50%"
-          innerRadius={90}
-          outerRadius={135}
+          innerRadius={id === 100 ? 80 : 90}
+          outerRadius={id === 100 ? 115 : 135}
           fill="#8884d8"
           dataKey="percentage"
           isAnimationActive={true}

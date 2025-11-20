@@ -28,7 +28,7 @@ export default function Chapter1() {
       </p>
       <div
         id={'fig1'}
-        className={'lg:w-2/3 xl:w-full mt-10 mb-8 border-t-2 border-blue-300'}
+        className={'lg:w-full mt-10 mb-8 border-t-2 border-blue-300'}
       >
         <PieChartApp props={fig01ScarcityYesNo} />
       </div>

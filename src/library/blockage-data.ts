@@ -8,11 +8,6 @@ export const navItems = [
     id: 'executive-summary',
   },
   {
-    href: '#respondent-info',
-    label: 'Survey Respondent Information',
-    id: 'respondent-info',
-  },
-  {
     href: '#commodity-shortages',
     label: '1. Commodity Shortages and Price Surge',
     id: 'commodity-shortages',
@@ -36,6 +31,11 @@ export const navItems = [
     href: '#support-capacity',
     label: '5. Capacity for Support and Hope',
     id: 'support-capacity',
+  },
+  {
+    href: '#respondent-info',
+    label: 'Survey Respondent Information',
+    id: 'respondent-info',
   },
   { href: '#appendix', label: 'Appendix: Survey Methodology', id: 'appendix' },
 ]
@@ -71,6 +71,7 @@ export type SurveyData = {
 
 // --- Demographic ---
 export const gender: SurveyData = {
+  id: 100,
   question: 'Respondents',
   payload: [
     {
@@ -95,6 +96,7 @@ export const gender: SurveyData = {
 }
 
 export const location: SurveyData = {
+  id: 100,
   question: 'Respondents by Location',
   payload: [
     {
@@ -125,6 +127,7 @@ export const location: SurveyData = {
 }
 
 export const age: SurveyData = {
+  id: 100,
   question: 'Age Group',
   payload: [
     {
@@ -161,6 +164,7 @@ export const age: SurveyData = {
 }
 
 export const income: SurveyData = {
+  id: 100,
   question: 'Monthly Household Income',
   payload: [
     {
