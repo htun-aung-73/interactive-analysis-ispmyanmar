@@ -7,8 +7,8 @@ export default function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className={'bg-gray-100 mt-10'}>
-      <div className={'container max-w-[1120] mx-auto p-5 md:px-6'}>
-        <div className="flex container mx-auto flex-col md:flex-row mb-5 justify-between">
+      <div className={'container max-w-[1120] mx-auto py-5'}>
+        <div className="flex container mx-auto flex-col px-5 md:px-6 md:flex-row mb-5 justify-between">
           <div>
             <div className="menu-footer-menu-container font-medium">
               <ul id="menu-footer-menu">
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto flex flex-col md:flex-row justify-between md:items-center text-xs text-gray-600 border-t border-gray-300 pt-5">
+        <div className="container mx-auto px-5 md:px-6 flex flex-col md:flex-row justify-between md:items-center text-xs text-gray-600 border-t border-gray-300 pt-5">
           <div>Copyright ISP-Myanmar © {year}. All Rights Reserved</div>
           <div className={'mt-3 md:mt-0'}>
             <div className="flex">
