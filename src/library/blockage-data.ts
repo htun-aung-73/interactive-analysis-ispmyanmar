@@ -32,11 +32,11 @@ export const navItems = [
     label: '5. Capacity for Support and Hope',
     id: 'support-capacity',
   },
-    {
-        href: '#respondent-info',
-        label: 'Survey Respondent Information',
-        id: 'respondent-info',
-    },
+  {
+    href: '#respondent-info',
+    label: 'Survey Respondent Information',
+    id: 'respondent-info',
+  },
   { href: '#appendix', label: 'Appendix: Survey Methodology', id: 'appendix' },
 ]
 

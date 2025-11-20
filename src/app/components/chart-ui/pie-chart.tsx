@@ -12,7 +12,6 @@ import { SurveyData } from '@/library/blockage-data'
 import React from 'react'
 import { IoMdInformationCircleOutline } from 'react-icons/io'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
-import useIsMobile from "@/app/components/blockage-survey/util/use-mobile";
 
 type Coordinate = {
   x: number
@@ -188,9 +187,7 @@ export default function PieChartApp({ props }: { props: SurveyData }) {
       </div>
       <PieChart
         responsive
-        className={
-          'w-full h-[530] border border-dotted border-t-0 border-gray-300'
-        }
+        className={'h-[530] border border-dotted border-t-0 border-gray-300'}
       >
         <Legend
           wrapperStyle={{
@@ -206,8 +203,8 @@ export default function PieChartApp({ props }: { props: SurveyData }) {
           data={payload}
           cx="50%"
           cy="50%"
-          innerRadius={(id===100 || useIsMobile())?80:90}
-          outerRadius={(id===100 || useIsMobile())?115:135}
+          innerRadius={id === 100 ? 80 : 90}
+          outerRadius={id === 100 ? 115 : 135}
           fill="#8884d8"
           dataKey="percentage"
           isAnimationActive={true}

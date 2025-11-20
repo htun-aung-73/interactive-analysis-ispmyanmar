@@ -54,6 +54,18 @@ export default function Appendix() {
         Upon completion of the survey, the data collector stores the collected
         data in accordance with ISP-Myanmar&#39;s established protocols.
       </p>
+      <p>
+        Please find out other publications here.
+        <a
+          href="https://ispmyanmar.com/publications/"
+          target={'_blank'}
+          className={
+            'inline-block mt-1 md:mt-0 md:ml-2 text-sm rounded-sm text-white px-2 py-1 bg-pink-600'
+          }
+        >
+          See more
+        </a>
+      </p>
     </div>
   )
 }
