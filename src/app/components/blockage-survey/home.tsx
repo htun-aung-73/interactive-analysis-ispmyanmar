@@ -87,7 +87,12 @@ export default function Home() {
                 width={200}
                 height={300}
               />
-              <DownloadButton text={'Download PDF'} href={'https://ispmyanmar.com/wp-content/uploads/2025/11/Raising-the-Lanterns-Wick-High.pdf'} />
+              <DownloadButton
+                text={'Download PDF'}
+                href={
+                  'https://ispmyanmar.com/wp-content/uploads/2025/11/Raising-the-Lanterns-Wick-High.pdf'
+                }
+              />
             </div>
           </div>
         </aside>
