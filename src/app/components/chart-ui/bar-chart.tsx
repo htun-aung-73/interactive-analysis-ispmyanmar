@@ -5,13 +5,14 @@ import useIsMobile from '@/app/components/blockage-survey/util/use-mobile'
 import { IoMdInformationCircleOutline } from 'react-icons/io'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import { CustomLabel } from '@/app/components/blockage-survey/util/custom-label'
+import React from "react";
 
-const CustomTooltip = ({
+const CustomTooltip = React.memo(({
   active,
   payload,
 }: {
-  active: boolean
-  payload: any
+  active?: boolean
+  payload?: any
 }) => {
   const isVisible = active && payload && payload.length
   return (
@@ -33,9 +34,9 @@ const CustomTooltip = ({
       )}
     </div>
   )
-}
+})
 
-export default function BarChartApp({ props }: { props: SurveyData }) {
+function BarChartApp({ props }: { props: SurveyData }) {
   const { id, question, layout, payload } = props
   const isMobile = useIsMobile()
 
@@ -82,7 +83,7 @@ export default function BarChartApp({ props }: { props: SurveyData }) {
             />
           ) : null}
           <Tooltip
-            content={CustomTooltip}
+            content={<CustomTooltip/>}
             cursor={{ fill: 'rgba(227,227,227,0.68)' }}
           />
           <Bar dataKey="count" fill="#8884d8" barSize={35}>
@@ -108,3 +109,5 @@ export default function BarChartApp({ props }: { props: SurveyData }) {
     </div>
   )
 }
+
+export default React.memo(BarChartApp)
