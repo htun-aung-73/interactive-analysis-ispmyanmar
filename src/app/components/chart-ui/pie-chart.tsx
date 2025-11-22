@@ -1,22 +1,16 @@
 'use client'
-import {
-  Cell,
-  Legend,
-  Pie,
-  PieChart,
-} from 'recharts'
+import { Cell, Legend, Pie, PieChart } from 'recharts'
 import { SurveyData } from '@/library/blockage-data'
 import React from 'react'
 import { IoMdInformationCircleOutline } from 'react-icons/io'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import {
-    CustomPieLegend,
-    renderActiveShape,
-    renderCustomizedLabel
-} from "@/app/components/blockage-survey/util/pie-utilities";
+  CustomPieLegend,
+  renderActiveShape,
+  renderCustomizedLabel,
+} from '@/app/components/blockage-survey/util/pie-utilities'
 
 function PieChartApp({ props }: { props: SurveyData }) {
-
   const { question, payload, note, id } = props
   return (
     <div>

@@ -5,8 +5,8 @@ import useIsMobile from '@/app/components/blockage-survey/util/use-mobile'
 import { IoMdInformationCircleOutline } from 'react-icons/io'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import { CustomLabel } from '@/app/components/blockage-survey/util/custom-label'
-import React from "react";
-import {BarTooltip} from "@/app/components/blockage-survey/util/bar-tooltip";
+import React from 'react'
+import { BarTooltip } from '@/app/components/blockage-survey/util/bar-tooltip'
 
 function BarChartApp({ props }: { props: SurveyData }) {
   const { id, question, layout, payload } = props
@@ -55,10 +55,15 @@ function BarChartApp({ props }: { props: SurveyData }) {
             />
           ) : null}
           <Tooltip
-            content={<BarTooltip/>}
+            content={<BarTooltip />}
             cursor={{ fill: 'rgba(227,227,227,0.68)' }}
           />
-          <Bar dataKey="count" fill="#8884d8" barSize={35}>
+          <Bar
+            dataKey="count"
+            fill="#8884d8"
+            barSize={35}
+            className={'bar-container'}
+          >
             {
               //@ts-ignore
               <LabelList
@@ -72,6 +77,7 @@ function BarChartApp({ props }: { props: SurveyData }) {
                   key={`cell-${index}`}
                   cursor="pointer"
                   fill={entry.color}
+                  className={'bar-cell'}
                 />
               )
             })}

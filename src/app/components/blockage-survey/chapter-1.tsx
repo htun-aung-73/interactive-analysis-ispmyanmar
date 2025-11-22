@@ -9,10 +9,17 @@ import {
   fig06PurchaseDifficulty,
 } from '@/library/blockage-data'
 import BarChartApp from '@/app/components/chart-ui/bar-chart'
-import useAnimateOnScroll from "@/app/components/blockage-survey/util/animate-on-scroll";
+import useAnimateOnScroll from '@/app/components/blockage-survey/util/animate-on-scroll'
 
 export default function Chapter1() {
-    const visibleIds = useAnimateOnScroll(['fig1','fig2','fig3','fig4','fig5','fig6']);
+  const visibleIds = useAnimateOnScroll([
+    'fig1',
+    'fig2',
+    'fig3',
+    'fig4',
+    'fig5',
+    'fig6',
+  ])
 
   return (
     <div id="commodity-shortages" className={'mt-10'}>
@@ -31,9 +38,11 @@ export default function Chapter1() {
       </p>
       <div
         id={'fig1'}
-        className={`opacity-0 ${visibleIds.includes('fig1')?'opacity-100':''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
+        className={`opacity-0 ${visibleIds.includes('fig1') ? 'opacity-100' : ''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
       >
-          {visibleIds.includes('fig1') && <PieChartApp props={fig01ScarcityYesNo} />}
+        {visibleIds.includes('fig1') && (
+          <PieChartApp props={fig01ScarcityYesNo} />
+        )}
       </div>
       <p className={'lg:w-full'}>
         The most common shortages were everyday consumer goods. Medicine
@@ -52,9 +61,11 @@ export default function Chapter1() {
       </p>
       <div
         id={'fig2'}
-        className={`opacity-0 ${visibleIds.includes('fig2')?'opacity-100':''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
+        className={`opacity-0 ${visibleIds.includes('fig2') ? 'opacity-100' : ''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
       >
-          {visibleIds.includes('fig2') && <BarChartApp props={fig02ScarcityGoods} />}
+        {visibleIds.includes('fig2') && (
+          <BarChartApp props={fig02ScarcityGoods} />
+        )}
       </div>
       <p className={'lg:w-full'}>
         Rising prices compounded these problems;{' '}
@@ -74,9 +85,11 @@ export default function Chapter1() {
       </p>
       <div
         id={'fig3'}
-        className={`opacity-0 ${visibleIds.includes('fig3')?'opacity-100':''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
+        className={`opacity-0 ${visibleIds.includes('fig3') ? 'opacity-100' : ''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
       >
-          {visibleIds.includes('fig3') && <PieChartApp props={fig03PriceIncreasePerception} />}
+        {visibleIds.includes('fig3') && (
+          <PieChartApp props={fig03PriceIncreasePerception} />
+        )}
       </div>
       <p className={'lg:w-full'}>
         Among the <span className={'font-bold'}>979 respondents</span> who
@@ -93,9 +106,11 @@ export default function Chapter1() {
       </p>
       <div
         id={'fig4'}
-        className={`opacity-0 ${visibleIds.includes('fig4')?'opacity-100':''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
+        className={`opacity-0 ${visibleIds.includes('fig4') ? 'opacity-100' : ''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
       >
-          { visibleIds.includes('fig4') && <BarChartApp props={fig04PriceIncreaseGoods} />}
+        {visibleIds.includes('fig4') && (
+          <BarChartApp props={fig04PriceIncreaseGoods} />
+        )}
       </div>
       <p className={'lg:w-full'}>
         Unsurprisingly,{' '}
@@ -111,9 +126,11 @@ export default function Chapter1() {
       </p>
       <div
         id={'fig5'}
-        className={`opacity-0 ${visibleIds.includes('fig5')?'opacity-100':''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
+        className={`opacity-0 ${visibleIds.includes('fig5') ? 'opacity-100' : ''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
       >
-          {visibleIds.includes('fig5') && <PieChartApp props={fig05FamilyImpact}/>}
+        {visibleIds.includes('fig5') && (
+          <PieChartApp props={fig05FamilyImpact} />
+        )}
       </div>
       <p className={'lg:w-full'}>
         Market conditions have also deteriorated.{' '}
@@ -135,9 +152,11 @@ export default function Chapter1() {
       </p>
       <div
         id={'fig6'}
-        className={`opacity-0 ${visibleIds.includes('fig6')?'opacity-100':''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
+        className={`opacity-0 ${visibleIds.includes('fig6') ? 'opacity-100' : ''} transition-all duration-800 lg:w-full mt-10 mb-8 border-t-2 border-blue-300`}
       >
-          {visibleIds.includes('fig6') && <PieChartApp props={fig06PurchaseDifficulty}/>}
+        {visibleIds.includes('fig6') && (
+          <PieChartApp props={fig06PurchaseDifficulty} />
+        )}
       </div>
     </div>
   )
