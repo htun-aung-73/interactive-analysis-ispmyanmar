@@ -1,7 +1,6 @@
 import { RedSquareIcon } from '@/app/components/chart-ui/red-square-icon'
 import DownloadSection from '@/app/components/blockage-survey/download'
 import { downloadContents } from '@/library/download-data'
-import DownloadButton from '@/app/components/blockage-survey/util/download-button'
 
 export default function Appendix() {
   return (

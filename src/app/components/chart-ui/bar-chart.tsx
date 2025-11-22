@@ -5,37 +5,10 @@ import useIsMobile from '@/app/components/blockage-survey/util/use-mobile'
 import { IoMdInformationCircleOutline } from 'react-icons/io'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import { CustomLabel } from '@/app/components/blockage-survey/util/custom-label'
+import React from 'react'
+import { BarTooltip } from '@/app/components/blockage-survey/util/bar-tooltip'
 
-const CustomTooltip = ({
-  active,
-  payload,
-}: {
-  active: boolean
-  payload: any
-}) => {
-  const isVisible = active && payload && payload.length
-  return (
-    <div
-      className="custom-tooltip"
-      style={{ visibility: isVisible ? 'visible' : 'hidden' }}
-    >
-      {isVisible && (
-        <>
-          <p className="label font-medium bg-gray-100 p-3 text-xs opacity-95">
-            {`${payload[0].payload.item} : `}
-            {
-              <span className={'font-bold'}>
-                {payload[0].payload.percentage}%
-              </span>
-            }
-          </p>
-        </>
-      )}
-    </div>
-  )
-}
-
-export default function BarChartApp({ props }: { props: SurveyData }) {
+function BarChartApp({ props }: { props: SurveyData }) {
   const { id, question, layout, payload } = props
   const isMobile = useIsMobile()
 
@@ -82,10 +55,15 @@ export default function BarChartApp({ props }: { props: SurveyData }) {
             />
           ) : null}
           <Tooltip
-            content={CustomTooltip}
+            content={<BarTooltip />}
             cursor={{ fill: 'rgba(227,227,227,0.68)' }}
           />
-          <Bar dataKey="count" fill="#8884d8" barSize={35}>
+          <Bar
+            dataKey="count"
+            fill="#8884d8"
+            barSize={35}
+            className={'bar-container'}
+          >
             {
               //@ts-ignore
               <LabelList
@@ -99,6 +77,7 @@ export default function BarChartApp({ props }: { props: SurveyData }) {
                   key={`cell-${index}`}
                   cursor="pointer"
                   fill={entry.color}
+                  className={'bar-cell'}
                 />
               )
             })}
@@ -108,3 +87,5 @@ export default function BarChartApp({ props }: { props: SurveyData }) {
     </div>
   )
 }
+
+export default React.memo(BarChartApp)
